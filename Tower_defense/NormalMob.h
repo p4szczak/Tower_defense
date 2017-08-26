@@ -11,7 +11,7 @@
 
 class NormalMob
 {
-	int speed = 1, healthPoints = 10;												//Mob speed and health
+	int speed = 1, healthPoints = 100;										//Mob speed and health
 	enum Directions { LEFT, RIGHT, UP, DOWN, NO_DIRECTION, STOP };			//mob moving directions
 	Directions direction = NO_DIRECTION;									//direction variable
 	Directions prevDirection;												//previous direction variable
@@ -27,7 +27,7 @@ class NormalMob
 	int countX, countZ;														//addition variable needed to change array coords
 
 	public:
-		void drawMob(glm::mat4 V, glm::mat4 M, int fieldTab[21][21]);		//standard mob draw
+		void drawMob(glm::mat4 V, glm::mat4 M, int fieldTab[21][21],GLuint tex);		//standard mob draw
 		NormalMob(glm::mat4 V, glm::mat4 M, int fieldTab[21][21]);			//mob constructor
 		int getTabPosX();													//returning tabPosX
 		int getTabPosZ();													//returning tabPosZ
